@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="457.513" Width="800">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="133" Background="#272727"/>
+        <Grid HorizontalAlignment="Left" Height="60" Margin="0,367,0,0" VerticalAlignment="Top" Width="792" Background="#272727">
+            <Slider x:Name="volume" HorizontalAlignment="Left" Margin="714,25,0,0" VerticalAlignment="Top" Width="50" Foreground="#FF0078D7" Thumb.DragStarted="volume_DragStarted" Thumb.DragCompleted="volume_DragCompleted"/>
+        </Grid>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="367" VerticalAlignment="Top" Width="659" Margin="133,0,0,0"/>
+        <Button x:Name="button1" Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="452,383,0,0" Click="Button1_Click"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,367,0,0" Width="772" Thumb.DragStarted="slider_DragStarted" Thumb.DragCompleted="slider_DragCompleted" ValueChanged="slider_ValueChanged" Foreground="#FF0078D7"/>
+        <Button x:Name="button" Content="Load Media" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Margin="10,311,0,0" Click="LoadButton_Click" Height="30"/>
+        <Button x:Name="button2" Content="Pause" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="362,383,0,0" Click="Button2_Click" Height="32"/>
+        <Label x:Name="label" Content="00:00:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,383,0,0" Width="68" FontSize="10" Background="{x:Null}" Foreground="White"/>
+    </Grid>
+</Window>
